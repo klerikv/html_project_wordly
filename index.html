@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Игра Wordly</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <section>
+        <h1>WORDLY</h1>
+
+        <!--Сама игра-->
+        <form>
+            <input type="text" id="text" placeholder="Введите слово" />
+            <div class="buttons">
+                <input type="button" id="check" value="Проверить" />
+                <input type="button" id="restart" value="Начать заново" />
+            </div>
+
+            <div class="game" id="gameContainer"></div>
+        </form>
+        
+    </section>
+    
+
+
+    
+    <div class="word-lists">
+        <!--Кнопки управления-->
+        <div class="controls">
+            <select id="lengthSelect">
+                <option value="4">4 буквы</option>
+                <option value="5" selected>5 букв</option>
+                <option value="6">6 букв</option>
+            </select>
+            <button id="themeToggle">Тёмная тема</button>
+        </div>
+        <hr />
+
+        <!-- Список допустимых слов -->
+        <h3>Допустимые слова</h3>
+        <div class="word-list">
+            <h4>Слова из 4 букв</h4>
+            <div id="words4"></div>
+        </div>
+        <div class="word-list">
+            <h4>Слова из 5 букв</h4>
+            <div id="words5"></div>
+        </div>
+        <div class="word-list">
+            <h4>Слова из 6 букв</h4>
+            <div id="words6"></div>
+        </div>
+        <hr />
+
+        <!--История игр-->
+        <h3>История игр</h3>
+        <button id="toggleHistory">Показать</button>
+        <div class="game-log" id="gameLog" style="display: none;">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

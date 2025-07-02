@@ -1,0 +1,214 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+hr {
+    height: 2px;
+    width: 70%;
+    background-color: var(--letter-neutral);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+section, .word-lists {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-color: var(--entry-bg);
+    padding: 20px;
+}
+
+body.dark-theme {
+    background-color: #121213;
+    color: #ffffff;
+}
+
+.word-lists {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.word-list {
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 70%;
+    box-sizing: border-box;
+}
+
+    .word-list h4 {
+        text-align: center;
+        margin-top: 0;
+        color: var(--text);
+    }
+
+    .word-list div {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+.controls {
+    text-align: center;
+    margin: 10px 0;
+    margin-top: 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, form {
+    text-align: center;
+}
+
+input, button, select {
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 2px 0;
+    padding: 2px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.buttons {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 290px;
+}
+
+#check{
+    background-color: #3a8e53;
+    color: white;
+}
+
+#restart {
+    background-color: #787c7e;
+    color: white;
+}
+
+#text {
+    width: 290px;
+}
+
+#themeToggle {
+    background-color: var(--theme-bg);
+    color: white;
+}
+
+.game {
+    padding: 20px 0;
+}
+
+.cell, .row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    align-items: center;
+    background-color: var(--letter-neutral);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: var(--text);
+    flex: 1 1;
+    font-size: 28px;
+    font-weight: 700;
+    height: 54px;
+    margin: 3px;
+    max-width: 54px;
+    text-transform: uppercase;
+}
+
+.letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.game-log {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--log-bg);
+}
+
+.game-entry {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--entry-bg);
+}
+
+/* Цветовые переменные */
+:root {
+    --letter-neutral: #f5f5f5;
+    --letter-correct: #6aaa64;
+    --letter-present: #c9b458;
+    --letter-absent: #787c7e;
+    --text: #000000;
+    --log-bg: #f0f0f0;
+    --entry-bg: #ffffff;
+    --theme-bg: #445e92;
+}
+
+.dark-theme {
+    --letter-neutral: #3a3a3c;
+    --letter-correct: #538d4e;
+    --letter-present: #b59f3b;
+    --letter-absent: #3a3a3c;
+    --text: #ffffff;
+    --log-bg: #2a2a2c;
+    --entry-bg: #1a1a1c;
+    --main-bg: #121213;
+    --theme-bg: #445e92;
+}
+
+/* Анимации */
+@keyframes celebrate {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.celebrate {
+    animation: celebrate 1s;
+}
+
+
+/**/
+
+.game-log {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--log-bg);
+    /* display: none; - теперь управляется через JS */
+}
+
+#toggleHistory {
+    display: block;
+    margin: 5px auto;
+    width: 70%;
+}
